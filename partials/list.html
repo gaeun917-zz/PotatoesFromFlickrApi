@@ -1,0 +1,25 @@
+<section class="list">
+    <div class="photolist_ul-listwarp">
+        <ul class="photolist_ul">
+            <li class="photolist_li" ng-repeat="item in photoList | filter: query | limitTo:10">
+                <div class="photolist_div-imgwrap">
+                    <img class="photolist_img" ng-src="{{item.media.m}}" alt="{{item.title}}">
+                </div>
+                <div class="photolist_div-textwrap">
+                    <div>
+                        <a class="photolist_h2-title" href="#/details/{{$index}}">
+                            <h1>{{item.title}}</h1>
+                        </a>
+                    </div>
+                    <div class="photolist-textinfo">
+                        <h2 class="photolist_h2-date">Published: {{item.published | date :"d'th' MMM yyyy 'at' HH:mm"}}</h2>
+                        <a class="photolist_a-author"
+                           href="https://www.flickr.com/photos/{{item.author_id}}">{{item.author_id}}</a>
+                        <h2 class="photolist_h2-date2">Published: {{item.published | date :"d'th' MMM yyyy 'at' HH:mm"}}</h2>
+                        <a class="photolist_a-link" href="{{item.link}}">View on Flickr</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>

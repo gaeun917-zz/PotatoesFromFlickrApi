@@ -1,0 +1,41 @@
+<section class="detail">
+    <div class="detail-titlewrap">
+        <a href="https://www.flickr.com/photos/{{photoList[whichItem].link}}">
+            <h1>{{photoList[whichItem].title}}</h1>
+        </a>
+        <a class="btn" href="#/list">back</a>
+    </div>
+    <div class="detail-infowrap">
+        <a href="https://www.flickr.com/photos/{{photoList[whichItem].author_id}}">Post Author</a>
+        <h2>Published: {{photoList[whichItem].published | date :"d'th' MMM yyyy 'at' HH:mm"}}</h2>
+    </div>
+    <div class="detail-descriptionwrap">
+        <div class="detail_description-imgwrap">
+            <img ng-src="{{photoList[whichItem].media.m}}" alt="">
+        </div>
+        <div class="detail_description-detailwrap">
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur commodi debitis
+                doloremque
+                eius expedita molestiae nam, natus nemo nostrum odit officia officiis quam recusandae sapiente sint ut
+                vel,
+                vero.
+            </div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur commodi debitis
+                doloremque
+                eius expedita molestiae nam, natus nemo nostrum odit officia officiis quam recusandae sapiente sint ut
+                vel,
+                vero.
+            </div>
+            <div>
+                <div class="detail_description-tagtitle">Tags</div>
+                <div class="detail_description-tag">
+                    <ul class="detail_description-tagwrap" ng-repeat="tag in tagList">
+                        <a class="detail_a-taglist" href="#/details/{{tag}}">
+                            <li class="detail_li-taglist">{{tag}}</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
